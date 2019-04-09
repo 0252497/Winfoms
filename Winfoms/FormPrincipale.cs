@@ -44,12 +44,47 @@ namespace Winfoms
                 {
                     BackColor = m_couleurInitiale;
                 }
+
+               toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
             }
         }
 
         private void btn_Quitter_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormPrincipale_SizeChanged(object sender, EventArgs e)
+        {
+            toolStripStatusLabelAction.Text = Size.ToString();
+        }
+
+        private void FormPrincipale_Move(object sender, EventArgs e)
+        {
+            toolStripStatusLabelAction.Text = Location.ToString();
+        }
+
+        private void FormPrincipale_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripStatusLabelAction.Text = $"({e.X}, {e.Y})";
+        }
+
+        private void FormPrincipale_MouseEnter(object sender, EventArgs e)
+        {
+            statusStrip1.BackColor = Color.Black;
+            statusStrip1.ForeColor = Color.White;
+        }
+
+        private void FormPrincipale_MouseLeave(object sender, EventArgs e)
+        {
+            statusStrip1.BackColor = Color.White;
+            statusStrip1.ForeColor = Color.Black;
+            statusStrip1.ForeColor = Color.Black;
+        }
+
+        private void FormPrincipale_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }
