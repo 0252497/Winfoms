@@ -102,7 +102,7 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.White;
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCouleurDeFond,
             this.toolStripStatusLabelAction});
@@ -111,10 +111,11 @@
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.MouseHover += new System.EventHandler(this.statusStrip1_MouseHover);
             // 
             // toolStripStatusLabelCouleurDeFond
             // 
-            this.toolStripStatusLabelCouleurDeFond.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripStatusLabelCouleurDeFond.BackColor = System.Drawing.SystemColors.Control;
             this.toolStripStatusLabelCouleurDeFond.Name = "toolStripStatusLabelCouleurDeFond";
             this.toolStripStatusLabelCouleurDeFond.Size = new System.Drawing.Size(93, 17);
             this.toolStripStatusLabelCouleurDeFond.Text = "Couleur de fond";
@@ -139,11 +140,13 @@
             this.Controls.Add(this.buttonBonjour);
             this.Name = "FormPrincipale";
             this.Text = "Bonjour le monde";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPrincipale_FormClosed);
             this.SizeChanged += new System.EventHandler(this.FormPrincipale_SizeChanged);
             this.Click += new System.EventHandler(this.modifierCouleurSelonTag);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormPrincipale_MouseDown);
             this.MouseEnter += new System.EventHandler(this.FormPrincipale_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.FormPrincipale_MouseLeave);
-            this.MouseHover += new System.EventHandler(this.FormPrincipale_MouseHover);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormPrincipale_MouseMove);
             this.Move += new System.EventHandler(this.FormPrincipale_Move);
             this.statusStrip1.ResumeLayout(false);
