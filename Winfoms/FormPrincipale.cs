@@ -21,31 +21,25 @@ namespace Winfoms
             m_couleurInitiale = BackColor;
             btn_Jaunir.Tag = Yellow;
             btn_Verdir.Tag = LimeGreen;
+            enNoirToolStripMenuItem.Tag = Black;
+            enRoseToolStripMenuItem.Tag = Pink;
             Tag = Red;
-        }
-
-        private void buttonBonjour_Click(object sender, EventArgs e)
-        {
-            if (sender is Button bouton)
-            {
-                MessageBox.Show($"{bouton.Text} \nBonjour le monde!");
-            }
         }
 
         private void modifierCouleurSelonTag(object sender, EventArgs e)
         {
             if(sender is Control control && control.Tag is Color couleur)
             {
-                if (BackColor != couleur)
-                {
-                    BackColor = couleur;
-                }
-                else
-                {
-                    BackColor = m_couleurInitiale;
-                }
+               BackColor = BackColor != couleur ? couleur : m_couleurInitiale;
 
                toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
+            }
+            else if (sender is ToolStripMenuItem menuItem && 
+                menuItem.Tag is Color color)
+            {
+                BackColor = color;
+
+                toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
             }
         }
 
@@ -107,14 +101,26 @@ namespace Winfoms
 
         private void FormPrincipale_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (sortirIllicoToolStripMenuItem.Checked) return;
+
             var résultat = MessageBox.Show(this, "Voulez-vous vraiment quitter?", "Confirmation",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
             e.Cancel = résultat == DialogResult.Cancel;
         }
 
         private void FormPrincipale_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (sortirIllicoToolStripMenuItem.Checked) return;
+
             MessageBox.Show("Au revoir!");
+        }
+        
+        private void direBonjourSelonText(object sender, EventArgs e)
+        {
+            MessageBox.Show(sender is Button bouton ?
+                $"{bouton.Text} \nBonjour le monde!" : 
+                $"{sender.ToString()} dit:\nBonjour le monde!");
         }
     }
 }

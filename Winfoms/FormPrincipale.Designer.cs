@@ -36,26 +36,36 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCouleurDeFond = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelAction = new System.Windows.Forms.ToolStripStatusLabel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.bonjourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bonjour3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bonjour4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enNoirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enRoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortirIllicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonBonjour
             // 
             this.buttonBonjour.AutoSize = true;
             this.buttonBonjour.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBonjour.Location = new System.Drawing.Point(64, 39);
+            this.buttonBonjour.Location = new System.Drawing.Point(64, 76);
             this.buttonBonjour.Name = "buttonBonjour";
             this.buttonBonjour.Size = new System.Drawing.Size(119, 56);
             this.buttonBonjour.TabIndex = 0;
             this.buttonBonjour.Text = "Bonjour 1";
             this.buttonBonjour.UseVisualStyleBackColor = true;
-            this.buttonBonjour.Click += new System.EventHandler(this.buttonBonjour_Click);
+            this.buttonBonjour.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // btn_Jaunir
             // 
             this.btn_Jaunir.AutoSize = true;
             this.btn_Jaunir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Jaunir.Location = new System.Drawing.Point(64, 131);
+            this.btn_Jaunir.Location = new System.Drawing.Point(64, 192);
             this.btn_Jaunir.Name = "btn_Jaunir";
             this.btn_Jaunir.Size = new System.Drawing.Size(103, 55);
             this.btn_Jaunir.TabIndex = 2;
@@ -67,19 +77,19 @@
             // 
             this.buttonBonjour2.AutoSize = true;
             this.buttonBonjour2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBonjour2.Location = new System.Drawing.Point(228, 39);
+            this.buttonBonjour2.Location = new System.Drawing.Point(217, 76);
             this.buttonBonjour2.Name = "buttonBonjour2";
             this.buttonBonjour2.Size = new System.Drawing.Size(119, 56);
             this.buttonBonjour2.TabIndex = 1;
             this.buttonBonjour2.Text = "Bonjour 2";
             this.buttonBonjour2.UseVisualStyleBackColor = true;
-            this.buttonBonjour2.Click += new System.EventHandler(this.buttonBonjour_Click);
+            this.buttonBonjour2.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // btn_Verdir
             // 
             this.btn_Verdir.AutoSize = true;
             this.btn_Verdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Verdir.Location = new System.Drawing.Point(195, 131);
+            this.btn_Verdir.Location = new System.Drawing.Point(217, 192);
             this.btn_Verdir.Name = "btn_Verdir";
             this.btn_Verdir.Size = new System.Drawing.Size(103, 55);
             this.btn_Verdir.TabIndex = 3;
@@ -127,17 +137,94 @@
             this.toolStripStatusLabelAction.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabelAction.Text = "Action";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bonjourToolStripMenuItem,
+            this.colorerToolStripMenuItem,
+            this.diversToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // bonjourToolStripMenuItem
+            // 
+            this.bonjourToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bonjour3ToolStripMenuItem,
+            this.bonjour4ToolStripMenuItem});
+            this.bonjourToolStripMenuItem.Name = "bonjourToolStripMenuItem";
+            this.bonjourToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.bonjourToolStripMenuItem.Text = "Bonjour";
+            // 
+            // bonjour3ToolStripMenuItem
+            // 
+            this.bonjour3ToolStripMenuItem.Name = "bonjour3ToolStripMenuItem";
+            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.bonjour3ToolStripMenuItem.Text = "Bonjour 3";
+            this.bonjour3ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
+            // 
+            // bonjour4ToolStripMenuItem
+            // 
+            this.bonjour4ToolStripMenuItem.Name = "bonjour4ToolStripMenuItem";
+            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.bonjour4ToolStripMenuItem.Text = "Bonjour 4";
+            this.bonjour4ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
+            // 
+            // colorerToolStripMenuItem
+            // 
+            this.colorerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enNoirToolStripMenuItem,
+            this.enRoseToolStripMenuItem});
+            this.colorerToolStripMenuItem.Name = "colorerToolStripMenuItem";
+            this.colorerToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.colorerToolStripMenuItem.Text = "Colorer";
+            // 
+            // enNoirToolStripMenuItem
+            // 
+            this.enNoirToolStripMenuItem.Name = "enNoirToolStripMenuItem";
+            this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enNoirToolStripMenuItem.Text = "En noir";
+            this.enNoirToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
+            // 
+            // enRoseToolStripMenuItem
+            // 
+            this.enRoseToolStripMenuItem.Name = "enRoseToolStripMenuItem";
+            this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enRoseToolStripMenuItem.Text = "En rose";
+            this.enRoseToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
+            // 
+            // diversToolStripMenuItem
+            // 
+            this.diversToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sortirIllicoToolStripMenuItem});
+            this.diversToolStripMenuItem.Name = "diversToolStripMenuItem";
+            this.diversToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.diversToolStripMenuItem.Text = "Divers";
+            // 
+            // sortirIllicoToolStripMenuItem
+            // 
+            this.sortirIllicoToolStripMenuItem.Checked = true;
+            this.sortirIllicoToolStripMenuItem.CheckOnClick = true;
+            this.sortirIllicoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.sortirIllicoToolStripMenuItem.Name = "sortirIllicoToolStripMenuItem";
+            this.sortirIllicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sortirIllicoToolStripMenuItem.Text = "Sortir illico";
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_Quitter);
             this.Controls.Add(this.btn_Verdir);
             this.Controls.Add(this.buttonBonjour2);
             this.Controls.Add(this.btn_Jaunir);
             this.Controls.Add(this.buttonBonjour);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
             this.Text = "Bonjour le monde";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
@@ -151,6 +238,8 @@
             this.Move += new System.EventHandler(this.FormPrincipale_Move);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +255,15 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCouleurDeFond;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelAction;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem bonjourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bonjour3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bonjour4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem colorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enNoirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enRoseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diversToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sortirIllicoToolStripMenuItem;
     }
 }
 
