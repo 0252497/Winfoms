@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Winfoms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Application étrange pour apprendre le fonctionnement de Winforms")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Cegep Saint-Jean-sur-Richelieu")]
+[assembly: AssemblyCompany("Département d'informatique du Cégep Saint-Jean-sur-Richelieu")]
 [assembly: AssemblyProduct("Winfoms")]
-[assembly: AssemblyCopyright("Copyright © Cegep Saint-Jean-sur-Richelieu 2019")]
+[assembly: AssemblyCopyright("Copyright © Véronique Giguère 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

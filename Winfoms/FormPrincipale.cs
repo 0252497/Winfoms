@@ -119,8 +119,13 @@ namespace Winfoms
         private void direBonjourSelonText(object sender, EventArgs e)
         {
             MessageBox.Show(sender is Button bouton ?
-                $"{bouton.Text} \nBonjour le monde!" : 
-                $"{sender.ToString()} dit:\nBonjour le monde!");
+                $"{bouton.Text.Replace("&", "")} \nBonjour le monde!" :
+                $"{sender.ToString().Replace("&", "")} dit:\nBonjour le monde!");
+        }
+
+        private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AboutBox().ShowDialog();
         }
     }
 }

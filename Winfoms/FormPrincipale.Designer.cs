@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipale));
             this.buttonBonjour = new System.Windows.Forms.Button();
             this.btn_Jaunir = new System.Windows.Forms.Button();
             this.buttonBonjour2 = new System.Windows.Forms.Button();
@@ -45,6 +47,8 @@
             this.enRoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirIllicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +61,7 @@
             this.buttonBonjour.Name = "buttonBonjour";
             this.buttonBonjour.Size = new System.Drawing.Size(119, 56);
             this.buttonBonjour.TabIndex = 0;
-            this.buttonBonjour.Text = "Bonjour 1";
+            this.buttonBonjour.Text = "Bonjour &1";
             this.buttonBonjour.UseVisualStyleBackColor = true;
             this.buttonBonjour.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
@@ -69,7 +73,8 @@
             this.btn_Jaunir.Name = "btn_Jaunir";
             this.btn_Jaunir.Size = new System.Drawing.Size(103, 55);
             this.btn_Jaunir.TabIndex = 2;
-            this.btn_Jaunir.Text = "Jaunir";
+            this.btn_Jaunir.Text = "&Jaunir";
+            this.toolTip1.SetToolTip(this.btn_Jaunir, "Pour mettre en jaune le fond du formulaire");
             this.btn_Jaunir.UseVisualStyleBackColor = true;
             this.btn_Jaunir.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
@@ -81,7 +86,7 @@
             this.buttonBonjour2.Name = "buttonBonjour2";
             this.buttonBonjour2.Size = new System.Drawing.Size(119, 56);
             this.buttonBonjour2.TabIndex = 1;
-            this.buttonBonjour2.Text = "Bonjour 2";
+            this.buttonBonjour2.Text = "Bonjour &2";
             this.buttonBonjour2.UseVisualStyleBackColor = true;
             this.buttonBonjour2.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
@@ -93,7 +98,8 @@
             this.btn_Verdir.Name = "btn_Verdir";
             this.btn_Verdir.Size = new System.Drawing.Size(103, 55);
             this.btn_Verdir.TabIndex = 3;
-            this.btn_Verdir.Text = "Verdir";
+            this.btn_Verdir.Text = "&Verdir";
+            this.toolTip1.SetToolTip(this.btn_Verdir, "Pour mettre en vert le fond du formulaire");
             this.btn_Verdir.UseVisualStyleBackColor = true;
             this.btn_Verdir.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
@@ -106,7 +112,7 @@
             this.btn_Quitter.Name = "btn_Quitter";
             this.btn_Quitter.Size = new System.Drawing.Size(123, 47);
             this.btn_Quitter.TabIndex = 4;
-            this.btn_Quitter.Text = "Quitter";
+            this.btn_Quitter.Text = "&Quitter";
             this.btn_Quitter.UseVisualStyleBackColor = false;
             this.btn_Quitter.Click += new System.EventHandler(this.btn_Quitter_Click);
             // 
@@ -142,7 +148,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bonjourToolStripMenuItem,
             this.colorerToolStripMenuItem,
-            this.diversToolStripMenuItem});
+            this.diversToolStripMenuItem,
+            this.àProposToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -156,20 +163,20 @@
             this.bonjour4ToolStripMenuItem});
             this.bonjourToolStripMenuItem.Name = "bonjourToolStripMenuItem";
             this.bonjourToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.bonjourToolStripMenuItem.Text = "Bonjour";
+            this.bonjourToolStripMenuItem.Text = "&Bonjour";
             // 
             // bonjour3ToolStripMenuItem
             // 
             this.bonjour3ToolStripMenuItem.Name = "bonjour3ToolStripMenuItem";
-            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.bonjour3ToolStripMenuItem.Text = "Bonjour 3";
+            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour3ToolStripMenuItem.Text = "Bonjour &3";
             this.bonjour3ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // bonjour4ToolStripMenuItem
             // 
             this.bonjour4ToolStripMenuItem.Name = "bonjour4ToolStripMenuItem";
-            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.bonjour4ToolStripMenuItem.Text = "Bonjour 4";
+            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour4ToolStripMenuItem.Text = "Bonjour &4";
             this.bonjour4ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // colorerToolStripMenuItem
@@ -179,20 +186,22 @@
             this.enRoseToolStripMenuItem});
             this.colorerToolStripMenuItem.Name = "colorerToolStripMenuItem";
             this.colorerToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.colorerToolStripMenuItem.Text = "Colorer";
+            this.colorerToolStripMenuItem.Text = "&Colorer";
             // 
             // enNoirToolStripMenuItem
             // 
             this.enNoirToolStripMenuItem.Name = "enNoirToolStripMenuItem";
+            this.enNoirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.enNoirToolStripMenuItem.Text = "En noir";
+            this.enNoirToolStripMenuItem.Text = "En &noir";
             this.enNoirToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
             // enRoseToolStripMenuItem
             // 
             this.enRoseToolStripMenuItem.Name = "enRoseToolStripMenuItem";
+            this.enRoseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.enRoseToolStripMenuItem.Text = "En rose";
+            this.enRoseToolStripMenuItem.Text = "En &rose";
             this.enRoseToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
             // diversToolStripMenuItem
@@ -201,7 +210,7 @@
             this.sortirIllicoToolStripMenuItem});
             this.diversToolStripMenuItem.Name = "diversToolStripMenuItem";
             this.diversToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.diversToolStripMenuItem.Text = "Divers";
+            this.diversToolStripMenuItem.Text = "&Divers";
             // 
             // sortirIllicoToolStripMenuItem
             // 
@@ -210,7 +219,15 @@
             this.sortirIllicoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sortirIllicoToolStripMenuItem.Name = "sortirIllicoToolStripMenuItem";
             this.sortirIllicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sortirIllicoToolStripMenuItem.Text = "Sortir illico";
+            this.sortirIllicoToolStripMenuItem.Text = "&Sortir illico";
+            // 
+            // àProposToolStripMenuItem
+            // 
+            this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
+            this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.àProposToolStripMenuItem.Text = "&À propos";
+            this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
             // FormPrincipale
             // 
@@ -224,9 +241,11 @@
             this.Controls.Add(this.buttonBonjour2);
             this.Controls.Add(this.btn_Jaunir);
             this.Controls.Add(this.buttonBonjour);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipale";
             this.Text = "Bonjour le monde";
+            this.toolTip1.SetToolTip(this, "Cliquer pour mettre en rouge le fond du formulaire");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPrincipale_FormClosed);
             this.SizeChanged += new System.EventHandler(this.FormPrincipale_SizeChanged);
@@ -264,6 +283,8 @@
         private System.Windows.Forms.ToolStripMenuItem enRoseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diversToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortirIllicoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem àProposToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
