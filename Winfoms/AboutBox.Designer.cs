@@ -1,4 +1,4 @@
-﻿namespace Winfoms
+﻿namespace Winforms
 {
     partial class AboutBox
     {

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Drawing.Color;
-namespace Winfoms
+
+namespace Winforms
 {
     public partial class FormPrincipale : Form
     {
@@ -34,8 +29,7 @@ namespace Winfoms
 
                toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
             }
-            else if (sender is ToolStripMenuItem menuItem && 
-                menuItem.Tag is Color color)
+            else if (sender is ToolStripItem item && item.Tag is Color color)
             {
                 BackColor = color;
 
@@ -118,14 +112,29 @@ namespace Winfoms
         
         private void direBonjourSelonText(object sender, EventArgs e)
         {
-            MessageBox.Show(sender is Button bouton ?
-                $"{bouton.Text.Replace("&", "")} \nBonjour le monde!" :
-                $"{sender.ToString().Replace("&", "")} dit:\nBonjour le monde!");
+            MessageBox.Show((sender is Control control ?
+                $"{control.Text.Replace("&", "")}" :
+                $"{sender.ToString().Replace("&", "")}") +
+                " dit:\nBonjour le monde!");
         }
 
         private void àProposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutBox().ShowDialog();
+        }
+
+        private void coordonnéesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //var résultat = new DlgCoordonnées().ShowDialog();
+            //MessageBox.Show(résultat == DialogResult.OK ? "Parfait!" : "On annule!");
+
+            var dlg = new DlgCoordonnées(10, 20);
+            var résultat = dlg.ShowDialog();
+
+            if (résultat == DialogResult.OK)
+            {
+                MessageBox.Show($"Nouvelles coordonnées: ({dlg.X}, {dlg.Y})");
+            }
         }
     }
 }

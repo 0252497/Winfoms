@@ -1,4 +1,4 @@
-﻿namespace Winfoms
+﻿namespace Winforms
 {
     partial class FormPrincipale
     {
@@ -49,6 +49,7 @@
             this.sortirIllicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.coordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -168,14 +169,14 @@
             // bonjour3ToolStripMenuItem
             // 
             this.bonjour3ToolStripMenuItem.Name = "bonjour3ToolStripMenuItem";
-            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.bonjour3ToolStripMenuItem.Text = "Bonjour &3";
             this.bonjour3ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // bonjour4ToolStripMenuItem
             // 
             this.bonjour4ToolStripMenuItem.Name = "bonjour4ToolStripMenuItem";
-            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.bonjour4ToolStripMenuItem.Text = "Bonjour &4";
             this.bonjour4ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
@@ -192,7 +193,7 @@
             // 
             this.enNoirToolStripMenuItem.Name = "enNoirToolStripMenuItem";
             this.enNoirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.enNoirToolStripMenuItem.Text = "En &noir";
             this.enNoirToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
@@ -200,14 +201,15 @@
             // 
             this.enRoseToolStripMenuItem.Name = "enRoseToolStripMenuItem";
             this.enRoseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.enRoseToolStripMenuItem.Text = "En &rose";
             this.enRoseToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
             // diversToolStripMenuItem
             // 
             this.diversToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sortirIllicoToolStripMenuItem});
+            this.sortirIllicoToolStripMenuItem,
+            this.coordonnéesToolStripMenuItem});
             this.diversToolStripMenuItem.Name = "diversToolStripMenuItem";
             this.diversToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.diversToolStripMenuItem.Text = "&Divers";
@@ -218,7 +220,7 @@
             this.sortirIllicoToolStripMenuItem.CheckOnClick = true;
             this.sortirIllicoToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sortirIllicoToolStripMenuItem.Name = "sortirIllicoToolStripMenuItem";
-            this.sortirIllicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sortirIllicoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.sortirIllicoToolStripMenuItem.Text = "&Sortir illico";
             // 
             // àProposToolStripMenuItem
@@ -228,6 +230,14 @@
             this.àProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.àProposToolStripMenuItem.Text = "&À propos";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
+            // 
+            // coordonnéesToolStripMenuItem
+            // 
+            this.coordonnéesToolStripMenuItem.Name = "coordonnéesToolStripMenuItem";
+            this.coordonnéesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.coordonnéesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.coordonnéesToolStripMenuItem.Text = "&Coordonnées";
+            this.coordonnéesToolStripMenuItem.Click += new System.EventHandler(this.coordonnéesToolStripMenuItem_Click);
             // 
             // FormPrincipale
             // 
@@ -285,6 +295,7 @@
         private System.Windows.Forms.ToolStripMenuItem sortirIllicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem àProposToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStripMenuItem coordonnéesToolStripMenuItem;
     }
 }
 
