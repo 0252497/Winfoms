@@ -34,16 +34,8 @@ namespace Winforms
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            if (sender == numericUpDownX)
-            {
-                X = (int)numericUpDownX.Value;
-            }
-
-            if (sender == numericUpDownY)
-            {
-                Y = (int)numericUpDownY.Value;
-            }
-
+            X = (int)numericUpDownX.Value;
+            Y = (int)numericUpDownY.Value;
             labelCoordonnées.Text = Coordonnées.ToString();
         }
 
