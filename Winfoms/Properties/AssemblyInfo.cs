@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Winfoms")]
+[assembly: AssemblyTitle("Winforms")]
 [assembly: AssemblyDescription("Application étrange pour apprendre le fonctionnement de Winforms")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Département d'informatique du Cégep Saint-Jean-sur-Richelieu")]
-[assembly: AssemblyProduct("Winfoms")]
+[assembly: AssemblyProduct("Winforms")]
 [assembly: AssemblyCopyright("Copyright © Véronique Giguère 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
