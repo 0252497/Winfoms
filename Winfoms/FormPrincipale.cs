@@ -10,6 +10,8 @@ namespace Winforms
         Color m_couleurInitiale;
         Color m_NouvelleCouleur = Red;
 
+        (int x, int y) m_Coordonnées = (0, 0);
+
         public FormPrincipale()
         {
             InitializeComponent();
@@ -18,6 +20,7 @@ namespace Winforms
             btn_Verdir.Tag = LimeGreen;
             enNoirToolStripMenuItem.Tag = Black;
             enRoseToolStripMenuItem.Tag = Pink;
+            toolStripStatusLabelCoordonnées.Text = m_Coordonnées.ToString();
             Tag = Red;
         }
 
@@ -125,15 +128,24 @@ namespace Winforms
 
         private void coordonnéesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //var résultat = new DlgCoordonnées().ShowDialog();
-            //MessageBox.Show(résultat == DialogResult.OK ? "Parfait!" : "On annule!");
+            // var résultat = new DlgCoordonnées().ShowDialog();
+            // MessageBox.Show(résultat == DialogResult.OK ? "Parfait!" : "On annule!");
 
-            var dlg = new DlgCoordonnées(10, 20);
+            // Passer les coordonnées au dialogue :
+            var dlg = new DlgCoordonnées(m_Coordonnées.x, m_Coordonnées.y);
             var résultat = dlg.ShowDialog();
 
             if (résultat == DialogResult.OK)
             {
-                MessageBox.Show($"Nouvelles coordonnées: ({dlg.X}, {dlg.Y})");
+                // Récupérer X et Y modifiés dans un tuple :
+                // var coordonnées = (dlg.X, dlg.Y);
+
+                // Récupérer les nouvelles coordonnées du dialogue :
+                m_Coordonnées = dlg.Coordonnées;
+
+                // MessageBox.Show($"Nouvelles coordonnées: {m_Coordonnées}");
+
+                toolStripStatusLabelCoordonnées.Text = m_Coordonnées.ToString();
             }
         }
     }

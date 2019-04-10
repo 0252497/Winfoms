@@ -47,9 +47,10 @@
             this.enRoseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirIllicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.coordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabelCoordonnées = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +123,8 @@
             this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCouleurDeFond,
-            this.toolStripStatusLabelAction});
+            this.toolStripStatusLabelAction,
+            this.toolStripStatusLabelCoordonnées});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
@@ -223,6 +225,14 @@
             this.sortirIllicoToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.sortirIllicoToolStripMenuItem.Text = "&Sortir illico";
             // 
+            // coordonnéesToolStripMenuItem
+            // 
+            this.coordonnéesToolStripMenuItem.Name = "coordonnéesToolStripMenuItem";
+            this.coordonnéesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.coordonnéesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.coordonnéesToolStripMenuItem.Text = "&Coordonnées";
+            this.coordonnéesToolStripMenuItem.Click += new System.EventHandler(this.coordonnéesToolStripMenuItem_Click);
+            // 
             // àProposToolStripMenuItem
             // 
             this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
@@ -231,13 +241,12 @@
             this.àProposToolStripMenuItem.Text = "&À propos";
             this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
-            // coordonnéesToolStripMenuItem
+            // toolStripStatusLabelCoordonnées
             // 
-            this.coordonnéesToolStripMenuItem.Name = "coordonnéesToolStripMenuItem";
-            this.coordonnéesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.coordonnéesToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.coordonnéesToolStripMenuItem.Text = "&Coordonnées";
-            this.coordonnéesToolStripMenuItem.Click += new System.EventHandler(this.coordonnéesToolStripMenuItem_Click);
+            this.toolStripStatusLabelCoordonnées.Margin = new System.Windows.Forms.Padding(20, 3, 0, 2);
+            this.toolStripStatusLabelCoordonnées.Name = "toolStripStatusLabelCoordonnées";
+            this.toolStripStatusLabelCoordonnées.Size = new System.Drawing.Size(78, 17);
+            this.toolStripStatusLabelCoordonnées.Text = "Coordonnées";
             // 
             // FormPrincipale
             // 
@@ -296,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem àProposToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolStripMenuItem coordonnéesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCoordonnées;
     }
 }
 

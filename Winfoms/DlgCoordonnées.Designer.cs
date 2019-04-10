@@ -33,7 +33,13 @@
             this.buttonAnnuler = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCoordonnées = new System.Windows.Forms.Label();
+            this.numericUpDownY = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownX = new System.Windows.Forms.NumericUpDown();
+            this.labelX = new System.Windows.Forms.Label();
+            this.labelY = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownX)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -48,6 +54,10 @@
             this.tableLayoutPanel1.Controls.Add(this.buttonAnnuler, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelCoordonnées, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownY, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownX, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelX, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelY, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -106,6 +116,58 @@
             this.labelCoordonnées.Text = "(x, y)";
             this.labelCoordonnées.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // numericUpDownY
+            // 
+            this.numericUpDownY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownY.Location = new System.Drawing.Point(203, 213);
+            this.numericUpDownY.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownY.Name = "numericUpDownY";
+            this.numericUpDownY.Size = new System.Drawing.Size(194, 23);
+            this.numericUpDownY.TabIndex = 4;
+            this.numericUpDownY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDownX
+            // 
+            this.numericUpDownX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDownX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownX.Location = new System.Drawing.Point(203, 123);
+            this.numericUpDownX.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownX.Name = "numericUpDownX";
+            this.numericUpDownX.Size = new System.Drawing.Size(194, 23);
+            this.numericUpDownX.TabIndex = 5;
+            this.numericUpDownX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // labelX
+            // 
+            this.labelX.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelX.AutoSize = true;
+            this.labelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX.Location = new System.Drawing.Point(172, 126);
+            this.labelX.Name = "labelX";
+            this.labelX.Size = new System.Drawing.Size(25, 17);
+            this.labelX.TabIndex = 6;
+            this.labelX.Text = "&X :";
+            // 
+            // labelY
+            // 
+            this.labelY.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelY.AutoSize = true;
+            this.labelY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelY.Location = new System.Drawing.Point(172, 216);
+            this.labelY.Name = "labelY";
+            this.labelY.Size = new System.Drawing.Size(25, 17);
+            this.labelY.TabIndex = 7;
+            this.labelY.Text = "&Y :";
+            // 
             // DlgCoordonnées
             // 
             this.AcceptButton = this.buttonOk;
@@ -118,6 +180,8 @@
             this.Text = "DlgCoordonnées";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownX)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -129,5 +193,9 @@
         private System.Windows.Forms.Button buttonAnnuler;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCoordonnées;
+        private System.Windows.Forms.NumericUpDown numericUpDownY;
+        private System.Windows.Forms.NumericUpDown numericUpDownX;
+        private System.Windows.Forms.Label labelX;
+        private System.Windows.Forms.Label labelY;
     }
 }
