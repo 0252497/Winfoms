@@ -20,11 +20,9 @@ namespace Winforms
         public DlgCoordonnées(int x = 0, int y = 0)
         {
             InitializeComponent();
+
             X = x;
             Y = y;
-
-            numericUpDownX.Enabled = !checkBoxVerrouiller.Checked;
-            numericUpDownY.Enabled = !checkBoxVerrouiller.Checked;
 
             numericUpDownX.Value = X;
             numericUpDownY.Value = Y;
@@ -45,12 +43,6 @@ namespace Winforms
             }
 
             labelCoordonnées.Text = Coordonnées.ToString();
-        }
-
-        private void checkBoxVerrouiller_CheckedChanged(object sender, EventArgs e)
-        {
-            numericUpDownX.Enabled = !checkBoxVerrouiller.Checked;
-            numericUpDownY.Enabled = !checkBoxVerrouiller.Checked;
         }
     }
 }
