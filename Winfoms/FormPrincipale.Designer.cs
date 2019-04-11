@@ -49,9 +49,9 @@
             this.diversToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortirIllicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.effacerCoordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.àProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.effacerCoordonnéesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -137,18 +137,18 @@
             // 
             this.toolStripStatusLabelCouleurDeFond.AutoSize = false;
             this.toolStripStatusLabelCouleurDeFond.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripStatusLabelCouleurDeFond.Margin = new System.Windows.Forms.Padding(3, 3, 5, 2);
+            this.toolStripStatusLabelCouleurDeFond.Margin = new System.Windows.Forms.Padding(0, 3, 15, 2);
             this.toolStripStatusLabelCouleurDeFond.Name = "toolStripStatusLabelCouleurDeFond";
-            this.toolStripStatusLabelCouleurDeFond.Size = new System.Drawing.Size(93, 17);
+            this.toolStripStatusLabelCouleurDeFond.Size = new System.Drawing.Size(100, 17);
             this.toolStripStatusLabelCouleurDeFond.Text = "Couleur de fond";
             this.toolStripStatusLabelCouleurDeFond.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStripStatusLabelAction
             // 
             this.toolStripStatusLabelAction.AutoSize = false;
-            this.toolStripStatusLabelAction.Margin = new System.Windows.Forms.Padding(5, 3, 0, 2);
+            this.toolStripStatusLabelAction.Margin = new System.Windows.Forms.Padding(3, 3, 3, 2);
             this.toolStripStatusLabelAction.Name = "toolStripStatusLabelAction";
-            this.toolStripStatusLabelAction.Size = new System.Drawing.Size(93, 17);
+            this.toolStripStatusLabelAction.Size = new System.Drawing.Size(85, 17);
             this.toolStripStatusLabelAction.Text = "Action";
             this.toolStripStatusLabelAction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -186,14 +186,14 @@
             // bonjour3ToolStripMenuItem
             // 
             this.bonjour3ToolStripMenuItem.Name = "bonjour3ToolStripMenuItem";
-            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour3ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.bonjour3ToolStripMenuItem.Text = "Bonjour &3";
             this.bonjour3ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
             // bonjour4ToolStripMenuItem
             // 
             this.bonjour4ToolStripMenuItem.Name = "bonjour4ToolStripMenuItem";
-            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bonjour4ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.bonjour4ToolStripMenuItem.Text = "Bonjour &4";
             this.bonjour4ToolStripMenuItem.Click += new System.EventHandler(this.direBonjourSelonText);
             // 
@@ -210,7 +210,7 @@
             // 
             this.enNoirToolStripMenuItem.Name = "enNoirToolStripMenuItem";
             this.enNoirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enNoirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.enNoirToolStripMenuItem.Text = "En &noir";
             this.enNoirToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
@@ -218,7 +218,7 @@
             // 
             this.enRoseToolStripMenuItem.Name = "enRoseToolStripMenuItem";
             this.enRoseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enRoseToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.enRoseToolStripMenuItem.Text = "En &rose";
             this.enRoseToolStripMenuItem.Click += new System.EventHandler(this.modifierCouleurSelonTag);
             // 
@@ -249,14 +249,6 @@
             this.coordonnéesToolStripMenuItem.Text = "&Coordonnées";
             this.coordonnéesToolStripMenuItem.Click += new System.EventHandler(this.coordonnéesToolStripMenuItem_Click);
             // 
-            // àProposToolStripMenuItem
-            // 
-            this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
-            this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.àProposToolStripMenuItem.Text = "&À propos";
-            this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
-            // 
             // effacerCoordonnéesToolStripMenuItem
             // 
             this.effacerCoordonnéesToolStripMenuItem.Name = "effacerCoordonnéesToolStripMenuItem";
@@ -264,6 +256,14 @@
             this.effacerCoordonnéesToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.effacerCoordonnéesToolStripMenuItem.Text = "&Effacer coordonnées";
             this.effacerCoordonnéesToolStripMenuItem.Click += new System.EventHandler(this.effacerCoordonnéesToolStripMenuItem_Click);
+            // 
+            // àProposToolStripMenuItem
+            // 
+            this.àProposToolStripMenuItem.Name = "àProposToolStripMenuItem";
+            this.àProposToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.àProposToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.àProposToolStripMenuItem.Text = "&À propos";
+            this.àProposToolStripMenuItem.Click += new System.EventHandler(this.àProposToolStripMenuItem_Click);
             // 
             // FormPrincipale
             // 
@@ -279,7 +279,9 @@
             this.Controls.Add(this.buttonBonjour);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "FormPrincipale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bonjour le monde";
             this.toolTip1.SetToolTip(this, "Cliquer pour mettre en rouge le fond du formulaire");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrincipale_FormClosing);
