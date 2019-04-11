@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Programme pour se pratiquer avec les nullables. 
+ * 
+ * Auteure : Véronique Giguère
+ * Création : 10 avril 2019
+ */
+using System;
 using static System.Console;
 
 namespace AfficherNullable
@@ -12,11 +13,12 @@ namespace AfficherNullable
         static void Main(string[] args)
         {
             Title = nameof(AfficherNullable);
+
             InfoEntierNullable(10);
             InfoEntierNullable(null);
         }
 
-        static void InfoEntierNullable(int? i) // Nullable<int> i
+        static void InfoEntierNullable(int? i) // Nullable<int> i => équivalent
         {
             WriteLine($"Entier: {i}");
             WriteLine("L'entier " + (i.HasValue ? "n'est pas" : "est") + " null");
@@ -34,8 +36,10 @@ namespace AfficherNullable
                 WriteLine($"j : exception!");
             }
 
-            WriteLine($"i + 1 : {(i ?? 0) + 1}");
-            WriteLine($"Entier: {i?.ToString() ?? "null"}");
+            WriteLine($"i + 1 : {(i ?? 0) + 1}");   // On remplace i par 0 si i est null
+
+            // On applique ToString à i seulement si i n'est pas null, sinon "null" :
+            WriteLine($"Entier: {i?.ToString() ?? "null"}");    
 
             WriteLine();
         }

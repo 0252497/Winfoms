@@ -1,35 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Dialogue de coordonnées DlgCoordonnées.
+ * 
+ * Auteure : Véronique Giguère
+ * Création : 10 avril 2019 
+ */
+using System;
 using System.Windows.Forms;
 
 namespace Winforms
 {
     public partial class DlgCoordonnées : Form
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        public int? X { get; private set; }
+        public int? Y { get; private set; }
 
-        public (int x, int y) Coordonnées => (X, Y);
+        public (int? x, int? y) Coordonnées => (X, Y);
 
-        public DlgCoordonnées(int x = 0, int y = 0)
+        // Initialisation au démarrage :
+        public DlgCoordonnées(int? x = null, int? y = null)
         {
             InitializeComponent();
+
             X = x;
             Y = y;
 
+            numericUpDownX.Value = X ?? 0;
+            numericUpDownY.Value = Y ?? 0;
+            
+            labelCoordonnées.Text = Coordonnées.ToString();
+
+            checkBoxVerrouiller.Checked = true;
+        }
+
+        private void checkBoxVerrouiller_CheckedChanged(object sender, EventArgs e)
+        {
             numericUpDownX.Enabled = !checkBoxVerrouiller.Checked;
             numericUpDownY.Enabled = !checkBoxVerrouiller.Checked;
-
-            numericUpDownX.Value = X;
-            numericUpDownY.Value = Y;
-
-            labelCoordonnées.Text = Coordonnées.ToString();
+            buttonOk.Enabled = !checkBoxVerrouiller.Checked;
         }
 
         private void numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -37,12 +43,6 @@ namespace Winforms
             X = (int)numericUpDownX.Value;
             Y = (int)numericUpDownY.Value;
             labelCoordonnées.Text = Coordonnées.ToString();
-        }
-
-        private void checkBoxVerrouiller_CheckedChanged(object sender, EventArgs e)
-        {
-            numericUpDownX.Enabled = !checkBoxVerrouiller.Checked;
-            numericUpDownY.Enabled = !checkBoxVerrouiller.Checked;
         }
     }
 }
