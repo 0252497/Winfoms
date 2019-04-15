@@ -148,15 +148,13 @@ namespace Winforms
             if (sender is Control control && control.Tag is Color couleur)
             {
                 BackColor = BackColor != couleur ? couleur : m_couleurInitiale;
-
-                toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
             }
             else if (sender is ToolStripItem item && item.Tag is Color color)
             {
                 BackColor = BackColor != color ? color : m_couleurInitiale;
-
-                toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
             }
+
+            toolStripStatusLabelCouleurDeFond.Text = BackColor.ToString();
         }
 
         private void statusStrip1_MouseHover(object sender, EventArgs e)
